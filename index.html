@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Математическое приключение: окружность</title><link rel="stylesheet" href="styles.css"></head>
+<body><div id="stage" data-theme="race">
+<header><b id="stg"></b><span id="cnt"></span><button class="ib" data-a="fs" title="Полный экран">⛶</button></header>
+
+<section class="s cv" data-t="Мотивация · 5 мин" data-th="race">
+ <div class="cl"></div><div class="cr"></div>
+ <img class="mq" src="mcqueen.png" alt="Молния Маккуин"><img class="mt" src="mater.png" alt="Мэтр">
+ <div class="ct"><h1>Математическое приключение:<br>от гоночного трека до магического лабиринта</h1>
+ <button class="b big" data-a="next">Начать приключение 🏁</button></div>
+</section>
+
+<section class="s" data-t="Мотивация · 5 мин" data-th="race">
+ <div class="row"><div class="col vid"><video id="v1" src="cars-race.mov" poster="race-track.png" controls playsinline preload="none"></video>
+  <div class="bar"><button class="b" data-a="play" data-v="v1">▶ Смотреть</button><button class="b alt" data-a="next">Пропустить видео</button></div></div>
+ <div class="col"><h2>Молнии Маккуину нужен новый трек</h2>
+ <p>Организаторы хотят, чтобы он был идеально круглым. Но как построить такую линию?</p>
+ <p class="q">Как построить линию, все точки которой находятся на одинаковом расстоянии от центра?</p>
+ <p class="sm">Обсудите с классом способы построения.</p></div></div>
+</section>
+
+<section class="s" data-t="Исследование · 10 мин" data-th="race">
+ <div class="row"><div class="col"><h2>Исследуем построение</h2>
+ <ul class="qs"><li>Что будет центром будущей окружности?</li><li>Как сохранить одинаковое расстояние от центра до линии?</li><li>Какой инструмент поможет построить такую линию?</li></ul>
+ <div class="bar"><button class="b hb" data-a="hint" data-h="Подсказка: ножка с иглой стоит на месте, а ножка с грифелем движется вокруг неё.">💡 Подсказка</button><button class="b" data-a="next">Показать циркуль</button></div></div>
+ <div class="col geo"><svg viewBox="0 0 600 520" data-show="O"></svg></div></div>
+</section>
+
+<section class="s" data-t="Исследование · 10 мин" data-th="mid">
+ <div class="row"><div class="col side"><h2>Интерактивный циркуль</h2>
+ <p class="sm">Радиус, см:</p><div class="bar" id="rb"><button class="b alt" data-a="rad" data-v="2">2</button><button class="b alt on" data-a="rad" data-v="3">3</button><button class="b alt" data-a="rad" data-v="4">4</button><button class="b alt" data-a="rad" data-v="5">5</button></div>
+ <div class="bar"><button class="b" data-a="build">Построить</button><button class="b alt" data-a="pause">Пауза</button><button class="b alt" data-a="cont">Продолжить</button></div>
+ <div class="bar"><button class="b alt" data-a="again">Повторить</button><button class="b alt" data-a="reset">Сбросить</button></div>
+ <img class="ref" src="compass-reference.png" alt="Циркуль"></div>
+ <div class="col geo"><svg viewBox="0 0 600 520" data-show="c k"></svg></div></div>
+</section>
+
+<section class="s" data-t="Исследование · 10 мин" data-th="mid">
+ <div class="row"><div class="col side"><h2>Отмечаем точки A, B и C</h2>
+ <div class="bar"><button class="b" data-a="pt" data-k="A">Добавить A</button><button class="b" data-a="pt" data-k="B">Добавить B</button><button class="b" data-a="pt" data-k="C">Добавить C</button></div>
+ <div class="bar"><button class="b alt" data-a="pt" data-k="all">Показать все точки</button></div>
+ <p class="q">Как проверить, что все эти точки находятся на одинаковом расстоянии от центра?</p></div>
+ <div class="col geo"><svg viewBox="0 0 600 520" data-show="c p"></svg></div></div>
+</section>
+
+<section class="s" data-t="Исследование · 10 мин" data-th="mid">
+ <div class="row"><div class="col side"><h2>Соединяем точки с центром</h2>
+ <div class="bar"><button class="b" data-a="rd" data-k="A">OA</button><button class="b" data-a="rd" data-k="B">OB</button><button class="b" data-a="rd" data-k="C">OC</button></div>
+ <div class="bar"><button class="b alt" data-a="rall">Соединить с центром</button><button class="b alt" data-a="lab">Подписи</button></div>
+ <p class="sm">Нажатие на кнопку скрывает или снова показывает отрезок.</p></div>
+ <div class="col geo"><svg viewBox="0 0 600 520" data-show="c p u l"></svg></div></div>
+</section>
+
+<section class="s" data-t="Исследование · 10 мин" data-th="mid">
+ <div class="row"><div class="col side"><h2>Сравниваем радиусы</h2>
+ <ul class="qs"><li>Что можно сказать о длинах OA, OB и OC?</li><li>Совпадают ли они?</li><li>Как проверить предположение?</li></ul>
+ <div class="bar"><button class="b hb" data-a="hint" data-h="Измерьте каждый отрезок линейкой. Масштаб поля: 1 клетка = 1 см.">💡 Подсказка</button><button class="b" data-a="meas">Показать измерения</button></div>
+ <div id="mt" class="step big2"></div></div>
+ <div class="col geo"><svg viewBox="0 0 600 520" data-show="c p u l m"></svg></div></div>
+</section>
+
+<section class="s" data-t="Открытие знания · 10 мин" data-th="mid">
+ <div class="center"><h2>Формулируем вывод</h2>
+ <p class="huge">Все точки окружности находятся на <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> расстоянии от её <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u>.</p>
+ <p class="huge step ans">Все точки окружности находятся на <b>одинаковом</b> расстоянии от её <b>центра</b>.</p>
+ <button class="b more">Открыть вывод</button></div>
+</section>
+
+<section class="s" data-t="Открытие знания · 10 мин" data-th="mid">
+ <div class="row"><div class="col"><h2>Определение окружности</h2>
+ <p class="step def"><b>Окружность</b> — это геометрическая фигура, состоящая из всех точек плоскости, равноудалённых от данной точки, называемой <b>центром</b> окружности.</p>
+ <p class="step">Чтобы построить окружность, мы выбираем центр и расстояние от него. Все точки, расположенные на этом расстоянии, образуют окружность.</p>
+ <button class="b more">Открыть определение</button></div>
+ <div class="col geo"><svg viewBox="0 0 600 520" data-show="f A rA"></svg></div></div>
+</section>
+
+<section class="s" data-t="Открытие знания · 10 мин" data-th="mid">
+ <div class="row"><div class="col"><h2>Центр и радиус</h2>
+ <p class="step def"><b>Радиус окружности</b> — это отрезок, соединяющий центр окружности с любой точкой этой окружности.</p>
+ <p class="step huge2">OA = OB = OC = r</p>
+ <ul class="step qs"><li>O — центр</li><li>OA, OB, OC — радиусы</li><li>r — длина радиуса</li></ul>
+ <button class="b more">Показать дальше</button></div>
+ <div class="col geo"><svg viewBox="0 0 600 520" data-show="f A B C rA rB rC"></svg></div></div>
+</section>
+
+<section class="s" data-t="Закрепление · 15 мин" data-th="mid">
+ <div class="row"><div class="col side"><h2>Внутри, на окружности и вне её</h2>
+ <p>Окружность радиуса 3 см. Где находятся точки K, L, M, N?</p>
+ <div class="bar"><button class="b" data-a="chk11">Проверить</button><button class="b alt" data-a="rst11">Сбросить</button></div></div>
+ <div class="col geo"><svg id="f11" viewBox="0 0 600 520"></svg></div></div>
+</section>
+
+<section class="s" data-t="Закрепление · 15 мин" data-th="magic">
+ <div class="row"><div class="col vid"><video id="v2" src="goblet-maze.mov" poster="magic-maze.png" controls playsinline preload="none"></video>
+  <div class="bar"><button class="b" data-a="play" data-v="v2">▶ Смотреть</button><button class="b alt" data-a="next">Пропустить видео</button></div></div>
+ <div class="col"><h2>Магический лабиринт</h2>
+ <p>В магическом лабиринте нужно найти все точки, которые находятся ровно в трёх сантиметрах от точки O.</p>
+ <p class="q">Как найти все точки, удалённые от точки O ровно на 3 см?</p></div></div>
+ <img class="snitch" src="golden-snitch.png" alt="Золотой снитч">
+</section>
+
+<section class="s" data-t="Закрепление · 15 мин" data-th="magic">
+ <div class="row"><div class="col side"><h2>Интерактивный лабиринт</h2>
+ <p>Перетащите точки: какие из них ровно в 3 см от O?</p>
+ <div class="bar"><button class="b" data-a="chk13">Проверить точки</button><button class="b alt" data-a="circ13">Показать окружность</button><button class="b alt" data-a="rst13">Сбросить</button></div></div>
+ <div class="col geo"><svg id="f13" viewBox="0 0 600 520"></svg></div></div>
+</section>
+
+<section class="s" id="s14" data-t="Закрепление · 15 мин" data-th="magic">
+ <div class="center"><h2>Окружность и круг</h2>
+ <div class="two"><svg class="fig f1" viewBox="0 0 300 300"><circle cx="150" cy="150" r="110" class="circ"/><circle cx="150" cy="150" r="4" fill="#fff"/></svg>
+ <svg class="fig f2" viewBox="0 0 300 300"><circle cx="150" cy="150" r="110" class="circ disc"/><circle cx="150" cy="150" r="4" fill="#fff"/></svg></div>
+ <div class="bar"><button class="b" data-a="mode" data-v="c">Окружность</button><button class="b" data-a="mode" data-v="k">Круг</button></div>
+ <p class="huge2" id="mtxt">Сравните две фигуры.</p></div>
+</section>
+
+<section class="s" data-t="Закрепление · 15 мин" data-th="magic">
+ <div class="center"><h2>Время проверить свои открытия!</h2>
+ <p class="huge">Откройте выданную книжку и выполните задания на страницах 2–5. Работайте с циркулем и линейкой, записывайте результаты и обязательно сформулируйте вывод.</p>
+ <button class="b big" data-a="next">Мы готовы к проверке</button></div>
+</section>
+
+<section class="s" data-t="Закрепление · 15 мин" data-th="magic">
+ <div class="row"><div class="col"><h2>Проверяем результат</h2>
+ <ul class="qs"><li>центр O</li><li>окружность</li><li>радиусы OA, OB и OC</li><li>OA = OB = OC = r</li></ul>
+ <p class="q">Что нам удалось выяснить? Сформулируйте устно.</p></div>
+ <div class="col geo"><svg viewBox="0 0 600 520" data-show="f A B C rA rB rC"></svg></div></div>
+</section>
+
+<section class="s" data-t="Рефлексия · 5 мин" data-th="magic">
+ <div class="center"><h2>Математическое приключение завершено!</h2>
+ <ul class="qs step"><li>Теперь я понимаю, что такое окружность.</li><li>Теперь я умею находить центр и радиус.</li><li>Теперь я умею строить окружность с помощью циркуля.</li></ul>
+ <p class="q step">Сегодня я понял(а), что…</p>
+ <p class="step def">Итог: окружность · центр · радиус · радиусы одной окружности равны.</p>
+ <button class="b more">Дальше</button></div>
+ <img class="snitch" src="golden-snitch.png" alt="">
+</section>
+
+<footer><button class="b alt" id="bk" data-a="back">← Назад</button><span class="hint">← → · пробел · Esc</span><button class="b" id="nx" data-a="next">Далее →</button></footer>
+<div id="pop"></div>
+</div><script src="script.js"></script></body></html>
